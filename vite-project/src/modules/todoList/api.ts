@@ -1,18 +1,67 @@
-const BASE_URL = "http://localhost:3000";
+import { infiniteQueryOptions, queryOptions } from "@tanstack/react-query";
+import { jsonApiInstance } from "../../shared/api/api-instance";
+
+// const BASE_URL = "http://localhost:3000";
 
 export type TodoDto = {
   id: string;
   text: string;
   done: boolean;
+  userId: string;
+};
+
+export type TodoListResponse = {
+  first: number;
+  prev: number | null;
+  next: number | null;
+  last: number;
+  pages: number;
+  items: number;
+  data: TodoDto[];
 };
 
 export const totoListApi = {
-  getTodoList: (
-    { page }: { page: number },
-    { signal }: { signal: AbortSignal },
-  ) => {
-    return fetch(`${BASE_URL}/tasks?page=${page}`, {
-      signal,
-    }).then((res) => res.json() as Promise<TodoDto[]>);
+  getTodoListQueryOptions: ({ page }: { page: number }) => {
+    return queryOptions({
+      queryKey: ["tasks", "list", page],
+      queryFn: (meta) =>
+        jsonApiInstance<TodoListResponse>(`/tasks?_page=${page}&_per_page=10`, {
+          signal: meta.signal,
+        }),
+    });
+  },
+
+  getTodoListInfinityQueryOptions: () => {
+    return infiniteQueryOptions({
+      queryKey: ["tasks", "list"],
+      queryFn: (meta) =>
+        jsonApiInstance<TodoListResponse>(
+          `/tasks?_page=${meta?.pageParam}&_per_page=10`,
+          {
+            signal: meta.signal,
+          },
+        ),
+      initialPageParam: 1,
+      getNextPageParam: (result) => result?.next,
+      select: (result) => result.pages.flatMap((page) => page.data),
+    });
+  },
+
+  createTodo: ({ done, text, userId, id }: TodoDto) => {
+    return jsonApiInstance<TodoDto>(`/tasks`, {
+      method: "POST",
+      json: { done, text, userId, id },
+    });
+  },
+  updateTodo: (id: string, data: Partial<TodoDto>) => {
+    return jsonApiInstance<TodoDto>(`/tasks/${id}`, {
+      method: "PATCH",
+      json: data,
+    });
+  },
+  deleteTodo: (id: string) => {
+    return jsonApiInstance<unknown>(`/tasks/${id}`, {
+      method: "DELETE",
+    });
   },
 };

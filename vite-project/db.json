@@ -1,504 +1,621 @@
 {
+    "users": [
+        {
+            "id": "1",
+            "login": "admin",
+            "password": "admin123"
+        },
+        {
+            "id": "2",
+            "login": "user",
+            "password": "user123"
+        },
+        {
+            "id": "3",
+            "login": "guest",
+            "password": "guest123"
+        }
+    ],
     "tasks": [
         {
             "id": "1",
             "text": "Купить молоко",
-            "done": "false"
+            "done": "false",
+            "userId": "1"
         },
         {
             "id": "2",
             "text": "Позвонить маме",
-            "done": "true"
+            "done": "true",
+            "userId": "1"
         },
         {
             "id": "3",
             "text": "Записаться к врачу",
-            "done": "false"
+            "done": "false",
+            "userId": "1"
         },
         {
             "id": "4",
             "text": "Оплатить счета",
-            "done": "false"
+            "done": "false",
+            "userId": "1"
         },
         {
             "id": "5",
             "text": "Почистить почту",
-            "done": "true"
+            "done": "true",
+            "userId": "1"
         },
         {
             "id": "6",
             "text": "Подготовить презентацию",
-            "done": "false"
+            "done": "false",
+            "userId": "1"
         },
         {
             "id": "7",
             "text": "Забрать посылку",
-            "done": "false"
+            "done": "false",
+            "userId": "1"
         },
         {
             "id": "8",
             "text": "Заправить машину",
-            "done": "true"
+            "done": "true",
+            "userId": "1"
         },
         {
             "id": "9",
             "text": "Заказать продукты онлайн",
-            "done": "false"
+            "done": "false",
+            "userId": "1"
         },
         {
             "id": "10",
             "text": "Проверить дедлайны проекта",
-            "done": "false"
+            "done": "false",
+            "userId": "1"
         },
         {
             "id": "11",
             "text": "Обновить резюме",
-            "done": "false"
+            "done": "false",
+            "userId": "1"
         },
         {
             "id": "12",
             "text": "Забронировать отель на отпуск",
-            "done": "true"
+            "done": "true",
+            "userId": "1"
         },
         {
             "id": "13",
             "text": "Починить кран на кухне",
-            "done": "false"
+            "done": "false",
+            "userId": "1"
         },
         {
             "id": "14",
             "text": "Прочитать статью",
-            "done": "false"
+            "done": "false",
+            "userId": "1"
         },
         {
             "id": "15",
             "text": "Сделать зарядку",
-            "done": "true"
+            "done": "true",
+            "userId": "1"
         },
         {
             "id": "16",
             "text": "Написать отчёт за неделю",
-            "done": "false"
+            "done": "false",
+            "userId": "1"
         },
         {
             "id": "17",
             "text": "Поменять пароль в соцсетях",
-            "done": "false"
+            "done": "false",
+            "userId": "1"
         },
         {
             "id": "18",
             "text": "Полить цветы",
-            "done": "true"
+            "done": "true",
+            "userId": "1"
         },
         {
             "id": "19",
             "text": "Сходить в спортзал",
-            "done": "false"
+            "done": "false",
+            "userId": "1"
         },
         {
             "id": "20",
             "text": "Выучить 10 новых слов",
-            "done": "false"
+            "done": "false",
+            "userId": "1"
         },
         {
             "id": "21",
             "text": "Почистить холодильник",
-            "done": "false"
+            "done": "false",
+            "userId": "1"
         },
         {
             "id": "22",
             "text": "Отправить документы по почте",
-            "done": "true"
+            "done": "true",
+            "userId": "1"
         },
         {
             "id": "23",
             "text": "Записать подкаст",
-            "done": "false"
+            "done": "false",
+            "userId": "1"
         },
         {
             "id": "24",
             "text": "Сделать бэкап ноутбука",
-            "done": "false"
+            "done": "false",
+            "userId": "1"
         },
         {
             "id": "25",
             "text": "Купить подарок коллеге",
-            "done": "false"
+            "done": "false",
+            "userId": "1"
         },
         {
             "id": "26",
             "text": "Разобрать шкаф",
-            "done": "true"
+            "done": "true",
+            "userId": "1"
         },
         {
             "id": "27",
             "text": "Настроить автоплатежи",
-            "done": "false"
+            "done": "false",
+            "userId": "1"
         },
         {
             "id": "28",
             "text": "Посмотреть вебинар",
-            "done": "false"
+            "done": "false",
+            "userId": "1"
         },
         {
             "id": "29",
             "text": "Позвонить в поддержку банка",
-            "done": "false"
+            "done": "false",
+            "userId": "1"
         },
         {
             "id": "30",
             "text": "Обновить приложения на телефоне",
-            "done": "true"
+            "done": "true",
+            "userId": "1"
         },
         {
             "id": "31",
             "text": "Записаться на курсы",
-            "done": "false"
+            "done": "false",
+            "userId": "1"
         },
         {
             "id": "32",
             "text": "Постирать бельё",
-            "done": "false"
+            "done": "false",
+            "userId": "1"
         },
         {
             "id": "33",
             "text": "Проверить страховку авто",
-            "done": "false"
+            "done": "false",
+            "userId": "1"
         },
         {
             "id": "34",
             "text": "Сделать ремонт в ванной",
-            "done": "true"
+            "done": "true",
+            "userId": "1"
         },
         {
             "id": "35",
             "text": "Написать пост в блог",
-            "done": "false"
+            "done": "false",
+            "userId": "1"
         },
         {
             "id": "36",
             "text": "Встретиться с друзьями",
-            "done": "false"
+            "done": "false",
+            "userId": "1"
         },
         {
             "id": "37",
             "text": "Купить билеты в кино",
-            "done": "false"
+            "done": "false",
+            "userId": "1"
         },
         {
             "id": "38",
             "text": "Провести ретро команды",
-            "done": "true"
+            "done": "true",
+            "userId": "1"
         },
         {
             "id": "39",
             "text": "Почистить ковёр",
-            "done": "false"
+            "done": "false",
+            "userId": "1"
         },
         {
             "id": "40",
             "text": "Изучить новый фреймворк",
-            "done": "false"
+            "done": "false",
+            "userId": "1"
         },
         {
             "id": "41",
             "text": "Заказать такси в аэропорт",
-            "done": "false"
+            "done": "false",
+            "userId": "1"
         },
         {
             "id": "42",
             "text": "Поменять лампочки",
-            "done": "true"
+            "done": "true",
+            "userId": "1"
         },
         {
             "id": "43",
             "text": "Составить план на месяц",
-            "done": "false"
+            "done": "false",
+            "userId": "1"
         },
         {
             "id": "44",
             "text": "Проверить кредитную историю",
-            "done": "false"
+            "done": "false",
+            "userId": "1"
         },
         {
             "id": "45",
             "text": "Сделать фото для документов",
-            "done": "false"
+            "done": "false",
+            "userId": "1"
         },
         {
             "id": "46",
             "text": "Записать голосовое сообщение",
-            "done": "true"
+            "done": "true",
+            "userId": "1"
         },
         {
             "id": "47",
             "text": "Почистить клавиатуру",
-            "done": "false"
+            "done": "false",
+            "userId": "1"
         },
         {
             "id": "48",
             "text": "Написать код-ревью",
-            "done": "false"
+            "done": "false",
+            "userId": "1"
         },
         {
             "id": "49",
             "text": "Купить чехол для телефона",
-            "done": "false"
+            "done": "false",
+            "userId": "1"
         },
         {
             "id": "50",
             "text": "Поздравить друга с днём рождения",
-            "done": "true"
+            "done": "true",
+            "userId": "1"
         },
         {
             "id": "51",
             "text": "Обновить портфолио",
-            "done": "false"
+            "done": "false",
+            "userId": "1"
         },
         {
             "id": "52",
             "text": "Проверить батареи в пульте",
-            "done": "false"
+            "done": "false",
+            "userId": "1"
         },
         {
             "id": "53",
             "text": "Заказать пиццу",
-            "done": "false"
+            "done": "false",
+            "userId": "1"
         },
         {
             "id": "54",
             "text": "Посмотреть документацию API",
-            "done": "true"
+            "done": "true",
+            "userId": "1"
         },
         {
             "id": "55",
             "text": "Настроить VPN",
-            "done": "false"
+            "done": "false",
+            "userId": "1"
         },
         {
             "id": "56",
             "text": "Провести созвон с клиентом",
-            "done": "false"
+            "done": "false",
+            "userId": "1"
         },
         {
             "id": "57",
             "text": "Купить витамины",
-            "done": "false"
+            "done": "false",
+            "userId": "1"
         },
         {
             "id": "58",
             "text": "Почистить фильтр кондиционера",
-            "done": "false"
+            "done": "false",
+            "userId": "1"
         },
         {
             "id": "59",
             "text": "Написать тесты",
-            "done": "true"
+            "done": "true",
+            "userId": "1"
         },
         {
             "id": "60",
             "text": "Забронировать столик в ресторане",
-            "done": "false"
+            "done": "false",
+            "userId": "1"
         },
         {
             "id": "61",
             "text": "Обновить завещание",
-            "done": "false"
+            "done": "false",
+            "userId": "1"
         },
         {
             "id": "62",
             "text": "Проверить счёт за электричество",
-            "done": "false"
+            "done": "false",
+            "userId": "1"
         },
         {
             "id": "63",
             "text": "Сделать донат благотворительности",
-            "done": "true"
+            "done": "true",
+            "userId": "1"
         },
         {
             "id": "64",
             "text": "Почистить обувь",
-            "done": "false"
+            "done": "false",
+            "userId": "1"
         },
         {
             "id": "65",
             "text": "Написать инструкцию для команды",
-            "done": "false"
+            "done": "false",
+            "userId": "1"
         },
         {
             "id": "66",
             "text": "Купить батарейки",
-            "done": "false"
+            "done": "false",
+            "userId": "1"
         },
         {
             "id": "67",
             "text": "Проверить срок годности продуктов",
-            "done": "false"
+            "done": "false",
+            "userId": "1"
         },
         {
             "id": "68",
             "text": "Записать идеи для проекта",
-            "done": "true"
+            "done": "true",
+            "userId": "1"
         },
         {
             "id": "69",
             "text": "Позвонить в ЖКХ",
-            "done": "false"
+            "done": "false",
+            "userId": "1"
         },
         {
             "id": "70",
             "text": "Почистить дисплей монитора",
-            "done": "false"
+            "done": "false",
+            "userId": "1"
         },
         {
             "id": "71",
             "text": "Настроить двухфакторную аутентификацию",
-            "done": "false"
+            "done": "false",
+            "userId": "1"
         },
         {
             "id": "72",
             "text": "Купить канцтовары",
-            "done": "true"
+            "done": "true",
+            "userId": "1"
         },
         {
             "id": "73",
             "text": "Провести онбординг новичка",
-            "done": "false"
+            "done": "false",
+            "userId": "1"
         },
         {
             "id": "74",
             "text": "Постирать куртку",
-            "done": "false"
+            "done": "false",
+            "userId": "1"
         },
         {
             "id": "75",
             "text": "Проверить расписание поездов",
-            "done": "false"
+            "done": "false",
+            "userId": "1"
         },
         {
             "id": "76",
             "text": "Написать письмо благодарности",
-            "done": "false"
+            "done": "false",
+            "userId": "1"
         },
         {
             "id": "77",
             "text": "Обновить антивирус",
-            "done": "true"
+            "done": "true",
+            "userId": "1"
         },
         {
             "id": "78",
             "text": "Заказать воду в офис",
-            "done": "false"
+            "done": "false",
+            "userId": "1"
         },
         {
             "id": "79",
             "text": "Почистить кофеварку",
-            "done": "false"
+            "done": "false",
+            "userId": "1"
         },
         {
             "id": "80",
             "text": "Проверить почту на спам",
-            "done": "false"
+            "done": "false",
+            "userId": "1"
         },
         {
             "id": "81",
             "text": "Купить корм для питомца",
-            "done": "false"
+            "done": "false",
+            "userId": "1"
         },
         {
             "id": "82",
             "text": "Сделать медитацию",
-            "done": "true"
+            "done": "true",
+            "userId": "1"
         },
         {
             "id": "83",
             "text": "Написать пост в LinkedIn",
-            "done": "false"
+            "done": "false",
+            "userId": "1"
         },
         {
             "id": "84",
             "text": "Проверить баланс на карте",
-            "done": "false"
+            "done": "false",
+            "userId": "1"
         },
         {
             "id": "85",
             "text": "Заказать доставку цветов",
-            "done": "false"
+            "done": "false",
+            "userId": "1"
         },
         {
             "id": "86",
             "text": "Почистить пылесос",
-            "done": "false"
+            "done": "false",
+            "userId": "1"
         },
         {
             "id": "87",
             "text": "Провести ревью кода",
-            "done": "true"
+            "done": "true",
+            "userId": "1"
         },
         {
             "id": "88",
             "text": "Купить зарядку для ноутбука",
-            "done": "false"
+            "done": "false",
+            "userId": "1"
         },
         {
             "id": "89",
             "text": "Настроить уведомления",
-            "done": "false"
+            "done": "false",
+            "userId": "1"
         },
         {
             "id": "90",
             "text": "Проверить аптечку",
-            "done": "false"
+            "done": "false",
+            "userId": "1"
         },
         {
             "id": "91",
             "text": "Записать подкаст с гостем",
-            "done": "false"
+            "done": "false",
+            "userId": "1"
         },
         {
             "id": "92",
             "text": "Почистить вентиляцию",
-            "done": "true"
+            "done": "true",
+            "userId": "1"
         },
         {
             "id": "93",
             "text": "Написать отчёт по спринту",
-            "done": "false"
+            "done": "false",
+            "userId": "1"
         },
         {
             "id": "94",
             "text": "Купить наушники",
-            "done": "false"
+            "done": "false",
+            "userId": "1"
         },
         {
             "id": "95",
             "text": "Проверить договор аренды",
-            "done": "false"
+            "done": "false",
+            "userId": "1"
         },
         {
             "id": "96",
             "text": "Заказать питьевую воду",
-            "done": "false"
+            "done": "false",
+            "userId": "1"
         },
         {
             "id": "97",
             "text": "Почистить гардероб",
-            "done": "true"
+            "done": "true",
+            "userId": "1"
         },
         {
             "id": "98",
             "text": "Настроить автоответ в почте",
-            "done": "false"
+            "done": "false",
+            "userId": "1"
         },
         {
             "id": "99",
             "text": "Провести стендап команды",
-            "done": "false"
+            "done": "false",
+            "userId": "1"
         },
         {
             "id": "100",
             "text": "Купить подарок на годовщину",
-            "done": "false"
+            "done": "false",
+            "userId": "1"
         }
     ]
 }
