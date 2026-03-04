@@ -1,4 +1,7 @@
 const BASE_URL = "http://localhost:3000";
+const REQUEST_DELAY_MS = 500;
+
+const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 
 class ApiError extends Error {
   // @ts-ignore - keep parameter property for this class
@@ -11,6 +14,8 @@ export const jsonApiInstance = async <T>(
   url: string,
   init?: RequestInit & { json?: unknown },
 ) => {
+  await sleep(REQUEST_DELAY_MS);
+
   let headers = init?.headers ?? {};
 
   if (init?.json) {

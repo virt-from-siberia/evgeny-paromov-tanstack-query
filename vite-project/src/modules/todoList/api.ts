@@ -21,11 +21,12 @@ export type TodoListResponse = {
 };
 
 export const totoListApi = {
-  getTodoListQueryOptions: ({ page }: { page: number }) => {
+  baseKey: "tasks",
+  getTodoListQueryOptions: () => {
     return queryOptions({
-      queryKey: ["tasks", "list", page],
+      queryKey: [totoListApi.baseKey, "list"],
       queryFn: (meta) =>
-        jsonApiInstance<TodoListResponse>(`/tasks?_page=${page}&_per_page=10`, {
+        jsonApiInstance<TodoDto[]>(`/tasks`, {
           signal: meta.signal,
         }),
     });
@@ -33,7 +34,7 @@ export const totoListApi = {
 
   getTodoListInfinityQueryOptions: () => {
     return infiniteQueryOptions({
-      queryKey: ["tasks", "list"],
+      queryKey: [totoListApi.baseKey, "list"],
       queryFn: (meta) =>
         jsonApiInstance<TodoListResponse>(
           `/tasks?_page=${meta?.pageParam}&_per_page=10`,
