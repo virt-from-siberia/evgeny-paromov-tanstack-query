@@ -1,19 +1,20 @@
 import { useTodoList } from "./useTodoList";
-import { useCreateTodo } from "./useCreateTodo";
 import type { TodoDto } from "./api";
 import { useDeleteTodo } from "./useDeteteTodo";
-
+import { useToggleTodo } from "./useToggleTodo";
+import { useUser } from "../auth/use-user";
+import { useCreateTodo } from "./useCreateTodo";
 const isDone = (d: unknown): boolean => d === true || d === "true";
 
 export const TodoList = () => {
   const { todoItems, error, isPending, isPlaceholderData } = useTodoList();
   const { handleDelete, getIsPending } = useDeleteTodo();
 
-  const {
-    handleCreate,
-    isPending: isCreatePending,
-    isFetching,
-  } = useCreateTodo();
+  const createTodo = useCreateTodo();
+
+  const { toggleTodo } = useToggleTodo();
+
+  const user = useUser();
 
   if (isPending) {
     return (
@@ -33,16 +34,12 @@ export const TodoList = () => {
   return (
     <div className="max-w-xl p-5 mx-auto">
       <h1 className="mb-4 text-xl font-medium tracking-tight text-slate-700">
-        Список задач
+        Список задач для пользователя: {user.data?.login}
       </h1>
 
       <form
         className="flex gap-2 mb-5 form-control"
-        onSubmit={(e) => {
-          e.preventDefault();
-          e.stopPropagation();
-          handleCreate(e);
-        }}
+        onSubmit={createTodo.handleCreate}
       >
         <input
           type="text"
@@ -52,7 +49,7 @@ export const TodoList = () => {
         <button
           className="p-2 border border-teal-500 rounded input disabled:opacity-50"
           type="submit"
-          disabled={isCreatePending || isFetching}
+          disabled={createTodo.isLoading}
         >
           Создать
         </button>
@@ -77,6 +74,7 @@ export const TodoList = () => {
               <input
                 type="checkbox"
                 checked={done}
+                onChange={() => toggleTodo(e?.id, done)}
                 readOnly
                 className="w-4 h-4 rounded cursor-default shrink-0 border-slate-300 text-emerald-500 focus:ring-emerald-400 focus:ring-1"
               />
